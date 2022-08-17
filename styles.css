@@ -70,19 +70,43 @@ a{
 }
 
 .info,
-form,
+.my-form,
 .form-submission{
   display: flex;
   flex: 1;
-  padding-left: 20px;
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 
 .info{
-  /* background-color: blueviolet; */
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+  padding-right: 325px;
+  font-weight: bold;
+}
+
+.my-form{
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  padding-right: 400px;
 }
 
 form{
-  background-color: rgb(250, 250, 250);
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 80px;
+  row-gap: 20px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+label{
+  font-size: 12px;
 }
 
 .form-submission{
