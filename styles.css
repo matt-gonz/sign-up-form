@@ -19,6 +19,7 @@ main{
 }
 
 .left-content{
+  position: relative;
   display: flex;
   width: 40%;
   background-image: url("./assets/ahmed-YNHoNCJB1CA-unsplash.jpg");
@@ -50,11 +51,11 @@ main{
 .credits{
   position: absolute;
   bottom: 0;
-  left: 0;
-  transform: translate(65%, 0);
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: antiquewhite;
   text-align: center;
-  line-height: 10px;
+  line-height: 15px;
   text-shadow: 2px 2px 2px black;
 }
 
