@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
     <title>Document</title>
   </head>
 
@@ -41,31 +42,37 @@
           </p>
         </div>
         <div class="my-form">
-          <h2>Let's do this!</h2>
-          <form action="" method="post" id="accountCreation">
+          <div class="form-header">
+            <h2>Let's do this!</h2>
+            <h6>(Fields marked with an * are required).</h6>
+          </div>
+          <form action="" method="get" id="accountCreation">
             <div>
-              <label for="fname">FIRST NAME</label>
-              <input type="text" name="fname" id="fname">
+              <label for="fname">FIRST NAME*</label>
+              <input type="text" name="fname" id="fname" required>
             </div>
             <div>
-              <label for="lname">LAST NAME</label>
-              <input type="text" name="lname" id="lname">
+              <label for="lname">LAST NAME*</label>
+              <input type="text" name="lname" id="lname" required>
             </div>
             <div>
-              <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email">
+              <label for="email">EMAIL*</label>
+              <input type="email" name="email" id="email" required>
             </div>
             <div>
               <label for="phone">PHONE NUMBER</label>
               <input type="tel" name="phone" id="phone">
             </div>
             <div>
-              <label for="pwd">PASSWORD</label>
-              <input type="password" name="pwd" id="pwd">
+              <label for="pwd">PASSWORD*</label>
+              <input type="password" name="pwd" id="pwd" required
+                onchange="onChange()">
+              <p id="errorMessage">*Passwords do not match</p>
             </div>
             <div>
-              <label for="confirm-pwd">CONFIRM PASSWORD</label>
-              <input type="password" name="confirm-pwd" id="confirm-pwd">
+              <label for="confirm-pwd">CONFIRM PASSWORD*</label>
+              <input type="password" name="confirm-pwd" id="confirm-pwd" 
+                required onchange="onChange()">
             </div>
           </form>
         </div>
